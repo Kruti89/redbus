@@ -1,0 +1,27 @@
+.MyTrips {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.emptyState {
+  width: 100%;
+  border-radius: 20px;
+  background: #fff2f2;
+  border: 1px solid #f5c2c4;
+  box-shadow: 0 14px 30px rgba(216, 78, 85, 0.1);
+  padding: 32px;
+  text-align: center;
+  color: #7a1111;
+}
+.emptyStateTitle {
+  font-size: 22px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+.emptyStateSubtitle {
+  font-size: 14px;
+  color: #8c4b4d;
+  line-height: 1.6;
+}

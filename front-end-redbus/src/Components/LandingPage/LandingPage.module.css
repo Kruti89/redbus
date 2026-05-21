@@ -1,0 +1,191 @@
+.LandingPage__mainBanner {
+  position: relative;
+  height: 450px;
+
+  /* 🔥 Light Red Overlay + Bus Image */
+  background-image:
+    linear-gradient(135deg, rgba(255, 0, 0, 0.5), rgba(200, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-bottom: 3px solid #f39c12;
+  overflow: hidden;
+}
+
+/* Soft bottom shadow overlay */
+.LandingPage__mainBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 100%);
+  z-index: 1;
+}
+
+/* FORM CONTAINER */
+.LandingPage__form {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  max-width: 1200px;
+  gap: 12px;
+
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* Animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Inputs */
+.LandingPage__form input,
+.LandingPage__form button {
+  height: 48px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+/* Focus */
+.LandingPage__form input:focus,
+.LandingPage__form button:focus {
+  outline: none;
+  border-color: #c80000;
+  box-shadow: 0 0 0 3px rgba(200, 0, 0, 0.12);
+}
+
+/* Input Styling */
+.LandingPage__form__arrival__input > input,
+.LandingPage__form__departure__input > input,
+.LandingPage__form__date > input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Placeholder */
+.LandingPage__form input::placeholder {
+  color: #999;
+  font-weight: 500;
+}
+
+/* Hover */
+.LandingPage__form input:hover {
+  border-color: #c80000;
+  background-color: rgba(200, 0, 0, 0.03);
+}
+
+/* Button */
+.LandingPage__form__button > button {
+  width: 100%;
+  background: linear-gradient(135deg, #c80000, #e74c3c);
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Button Hover */
+.LandingPage__form__button > button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(200, 0, 0, 0.35);
+  background: linear-gradient(135deg, #a00000, #c80000);
+}
+
+/* Dropdown */
+.LandingPage__form__arrival__dropdown,
+.LandingPage__form__departure__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 8px;
+
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+
+  max-height: 250px;
+  overflow-y: auto;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* Dropdown Items */
+.LandingPage__form__arrival__dropdown li,
+.LandingPage__form__departure__dropdown li {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover */
+.LandingPage__form__arrival__dropdown li:hover,
+.LandingPage__form__departure__dropdown li:hover {
+  background: rgba(200, 0, 0, 0.08);
+  color: #c80000;
+  padding-left: 20px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .LandingPage__form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .LandingPage__mainBanner {
+    height: 350px;
+  }
+
+  .LandingPage__form {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .LandingPage__mainBanner {
+    height: 280px;
+  }
+
+  .LandingPage__form {
+    margin-top: 30px;
+    width: 95%;
+    padding: 12px;
+  }
+
+  .LandingPage__form input,
+  .LandingPage__form button {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}

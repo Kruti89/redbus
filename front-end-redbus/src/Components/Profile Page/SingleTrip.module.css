@@ -1,0 +1,62 @@
+.SingleTrip {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 22px;
+  border-radius: 26px;
+  background: #fff;
+  border: 1px solid #fad2d4;
+  box-shadow: 0 20px 40px rgba(217, 72, 88, 0.12);
+}
+.SingleTrip__image img {
+  width: 100%;
+  border-radius: 22px;
+  max-height: 260px;
+  object-fit: cover;
+}
+.SingleTrip__busdetails,
+.SingleTrip__persondetails {
+  line-height: 1.9;
+  padding: 26px;
+  border-radius: 20px;
+  border: 1px solid #f2d4d6;
+  background: #fff7f7;
+}
+.SingleTrip__busdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.SingleTrip__persondetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.SingleTrip__sectionTitle {
+  color: #d84e55;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.dotIcon {
+  margin-right: 14px;
+  font-size: 9px;
+  color: #4fa573;
+  vertical-align: middle;
+}
+.SingleTrip__customerDetails__passenger {
+  display: grid;
+  gap: 16px;
+  padding-top: 12px;
+}
+@media (min-width: 980px) {
+  .SingleTrip {
+    flex-direction: row;
+  }
+  .SingleTrip__busdetails,
+  .SingleTrip__persondetails {
+    flex: 1;
+  }
+}

@@ -1,0 +1,272 @@
+.page {
+  padding: 40px 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+  color: #1d2646;
+}
+
+.heroCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 36px;
+  background: linear-gradient(135deg, #fff4f7 0%, #fff9fc 100%);
+  border-radius: 32px;
+  box-shadow: 0 22px 50px rgba(105, 71, 102, 0.12);
+}
+
+.heroInfo {
+  max-width: 640px;
+}
+
+.smallTitle {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #d84e55;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.heroInfo h1 {
+  font-size: clamp(34px, 3vw, 48px);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.heroInfo p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #505a73;
+  margin-top: 22px;
+  max-width: 560px;
+}
+
+.primaryButton {
+  margin-top: 28px;
+  padding: 15px 28px;
+  border-radius: 14px;
+  background: #d84e55;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 18px 28px rgba(216, 78, 85, 0.25);
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.heroImage {
+  position: relative;
+  min-width: 320px;
+  height: 320px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(105, 71, 102, 0.16);
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroBadge {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #2f2f3f;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  margin-top: 42px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.actionCard {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(216, 78, 85, 0.14);
+  box-shadow: 0 20px 40px rgba(105, 71, 102, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.actionCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(105, 71, 102, 0.14);
+}
+
+.actionCard h3 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  color: #1d2646;
+}
+
+.actionCard p {
+  margin: 0;
+  color: #5c677f;
+  line-height: 1.75;
+}
+
+.detailPanel {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.detailCard {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(217, 146, 165, 0.18);
+}
+
+.tag {
+  display: inline-flex;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #fce4e9;
+  color: #d84e55;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.detailCard h2 {
+  margin: 0;
+  font-size: 34px;
+  color: #1d2646;
+  line-height: 1.05;
+}
+
+.detailCard p {
+  margin: 18px 0 0;
+  color: #5c677f;
+  line-height: 1.8;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.primaryButtonSmall,
+.secondaryButton {
+  border-radius: 14px;
+  padding: 14px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.primaryButtonSmall {
+  background: #d84e55;
+  color: #fff;
+  border: none;
+}
+
+.primaryButtonSmall:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #d84e55;
+  border: 1px solid #d84e55;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.bookingMeta {
+  background: linear-gradient(180deg, #fff8f9 0%, #ffffff 100%);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 18px 36px rgba(105, 71, 102, 0.08);
+}
+
+.bookingMeta h3 {
+  margin: 0 0 16px;
+  color: #1d2646;
+}
+
+.bookingMeta p {
+  margin: 0 0 12px;
+  color: #5c677f;
+  line-height: 1.75;
+}
+
+.metaField {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(150, 150, 180, 0.12);
+}
+
+.metaField:last-child {
+  border-bottom: none;
+}
+
+.metaLabel {
+  color: #8d93a3;
+  font-size: 14px;
+}
+
+.metaValue {
+  color: #323755;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .heroCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .heroImage {
+    width: 100%;
+    min-width: auto;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .detailPanel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 24px 16px;
+  }
+  .heroInfo h1 {
+    font-size: 28px;
+  }
+  .detailCard {
+    padding: 24px;
+  }
+}

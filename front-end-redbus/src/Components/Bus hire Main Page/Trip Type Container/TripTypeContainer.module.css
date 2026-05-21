@@ -1,0 +1,43 @@
+.tripTypecontainer {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  display: flex;
+  width: min(420px, 92%);
+  flex-direction: column;
+  margin: 40px auto;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.hireVehicleHeading {
+  background-color: #d84e55;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+.journeyTypeDiv {
+  cursor: pointer;
+  height: 116px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 75%, 0.5);
+  border: 1px solid #f0f1f2;
+  background-color: #fff;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  padding: 20px;
+  justify-content: space-between;
+}
+.journeyText {
+  color: #3e3e52;
+  font-size: 16px;
+  font-weight: 800;
+}
+.journeySubText {
+  color: #3e3e52;
+  font-size: 14px;
+  font-weight: 500;
+}

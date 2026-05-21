@@ -1,0 +1,148 @@
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+.BusHireFormcontainer {
+  position: relative;
+  box-shadow: 0 24px 60px rgba(54, 35, 80, 0.12);
+  display: flex;
+  width: min(520px, 95%);
+  flex-direction: column;
+  margin: 40px auto;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.outstationHeading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #d84e55;
+  padding: 22px 24px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  gap: 14px;
+}
+.formContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f8ff;
+  padding: 28px;
+  gap: 18px;
+}
+.dateRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.dateField {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: min(48%, 240px);
+}
+.pickUpDestnationDiv {
+  padding: 20px;
+  margin-top: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  border: 1px solid rgba(216, 216, 216, 0.7);
+  background-color: #ffffff;
+}
+.pickupDestiationHeading {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3e3e52;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.fromWhenHeading {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3e3e52;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.dottedDiv {
+  width: 0;
+  height: 42px;
+  border-color: #d8d8d8;
+  border-style: dotted;
+  border-width: 0 0 0 4px;
+  margin: 0 16px;
+}
+.inputBox {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 14px;
+  border: 1px solid #d8d8d8;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #333;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.inputBox:focus {
+  outline: none;
+  border-color: #d84e55;
+  box-shadow: 0 0 0 4px rgba(216, 78, 85, 0.1);
+}
+.pickUpDestnationEachDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+.proceedDiv {
+  background: linear-gradient(135deg, #d6495f 0%, #ef6a7d 100%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  border: none;
+  padding: 18px;
+  margin: 10px auto 0;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.proceedDiv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 28px rgba(216, 78, 85, 0.2);
+}
+@media (max-width: 780px) {
+  .BusHireFormcontainer {
+    width: 100%;
+    margin: 24px 0;
+    border-radius: 24px;
+  }
+  .outstationHeading {
+    font-size: 20px;
+    padding: 18px 20px;
+  }
+  .formContent {
+    padding: 22px;
+  }
+  .pickUpDestnationDiv {
+    padding: 18px;
+  }
+  .pickUpDestnationEachDiv {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .dottedDiv {
+    display: none;
+  }
+}

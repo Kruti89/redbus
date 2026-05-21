@@ -1,0 +1,105 @@
+.couponContainer {
+  width: 100%;
+  min-height: 360px;
+  background: linear-gradient(135deg, #fff7f7, #f7f7f7);
+  padding: 55px 0 45px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  width: 78%;
+  margin: auto;
+  justify-content: center;
+  gap: 28px;
+}
+
+.coupon {
+  flex-basis: 32%;
+  background: linear-gradient(135deg, #fff1f1, #ffe5e5);
+  text-align: center;
+  padding: 18px 14px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #ffd6d6;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.coupon:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(135deg, #ffd6d6, #ffb3b3);
+  box-shadow: 0 16px 35px rgba(216, 79, 87, 0.28);
+}
+
+.coupon > span {
+  display: block;
+}
+
+.coupon > span:first-child {
+  margin: 8px 0 14px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.coupon > span:last-child {
+  margin: 14px 0 6px;
+  color: #c80000;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.offerImage {
+  height: 150px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.offerImage > img {
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+/* Neeche wala Safety+ floating box hide */
+.float {
+  display: none;
+}
+
+.writingBox {
+  display: none;
+}
+
+.buttonBox {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .flex {
+    width: 90%;
+    gap: 18px;
+  }
+
+  .coupon {
+    flex-basis: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .couponContainer {
+    padding: 35px 0;
+  }
+
+  .flex {
+    flex-direction: column;
+    width: 88%;
+  }
+
+  .coupon {
+    width: 100%;
+  }
+}

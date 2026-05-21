@@ -1,0 +1,84 @@
+.Header {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+.HeaderOne {
+  background: linear-gradient(135deg, #f8f4f4 0%, #fafafa 100%);
+  padding: 16px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.HeaderOne > p:nth-child(1) {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.HeaderOne > p {
+  margin: 8px 0 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.HeaderTwo {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.HeaderTwo > * {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.HeaderTwo > button {
+  padding: 8px 16px;
+  background-color: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.HeaderTwo > button:hover {
+  border-color: #c80000;
+  color: #c80000;
+  background-color: rgba(200, 0, 0, 0.05);
+}
+
+.HeaderTwo > button.active {
+  background: linear-gradient(135deg, #c80000 0%, #e74c3c 100%);
+  color: white;
+  border-color: #c80000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .HeaderOne {
+    padding: 12px;
+  }
+
+  .HeaderTwo {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .HeaderTwo > button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}

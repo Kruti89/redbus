@@ -1,0 +1,412 @@
+.rPoolContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Hero Banner */
+.heroBanner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(216, 78, 85, 0.6);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  color: white;
+  max-width: 600px;
+}
+
+.heroContent h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.heroContent p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Search Section */
+.searchSection {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.searchCard {
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.tripTypeSelector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.tripButton {
+  padding: 12px 30px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #3e3e52;
+}
+
+.tripButton:hover {
+  border-color: #d84e55;
+  color: #d84e55;
+}
+
+.tripButton.active {
+  background: #d84e55;
+  color: white;
+  border-color: #d84e55;
+}
+
+.searchInputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #d84e55;
+  box-shadow: 0 0 0 3px rgba(216, 78, 85, 0.1);
+}
+
+.searchBtn {
+  width: 100%;
+  padding: 14px 30px;
+  background: #d84e55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchBtn:hover {
+  background: #c23d44;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(216, 78, 85, 0.3);
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.featuresSection h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #3e3e52;
+  margin-bottom: 40px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.featureCard {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(216, 78, 85, 0.15);
+}
+
+.featureIcon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.featureCard h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3e3e52;
+  margin: 0 0 10px 0;
+}
+
+.featureCard p {
+  font-size: 14px;
+  color: #7a7a8e;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Upcoming Rides Section */
+.upcomingRidesSection {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upcomingRidesSection h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #3e3e52;
+  margin-bottom: 40px;
+}
+
+.ridesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.loadingMessage,
+.errorMessage,
+.emptyMessage {
+  font-size: 18px;
+  color: #3e3e52;
+  margin: 0 auto 16px auto;
+  max-width: 700px;
+}
+
+.errorMessage {
+  color: #d84e55;
+}
+
+.rideCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.rideCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(216, 78, 85, 0.2);
+}
+
+.rideImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.rideInfo {
+  padding: 20px;
+  text-align: left;
+}
+
+.rideRoute {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.routeCity {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3e3e52;
+}
+
+.routeArrow {
+  color: #d84e55;
+  font-weight: bold;
+}
+
+.rideDate {
+  font-size: 13px;
+  color: #7a7a8e;
+  margin: 0 0 12px 0;
+}
+
+.rideDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #3e3e52;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d84e55;
+}
+
+.bookBtn {
+  width: 100%;
+  padding: 10px;
+  background: #d84e55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bookBtn:hover {
+  background: #c23d44;
+  transform: translateY(-2px);
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #d84e55 0%, #ff6b6b 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.ctaSection h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.ctaSection p {
+  font-size: 18px;
+  margin: 0 0 30px 0;
+  opacity: 0.95;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background: white;
+  color: #d84e55;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 32px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+  }
+
+  .searchCard {
+    padding: 25px;
+  }
+
+  .searchInputs {
+    grid-template-columns: 1fr;
+  }
+
+  .featuresSection h2,
+  .upcomingRidesSection h2,
+  .ctaSection h2 {
+    font-size: 28px;
+  }
+
+  .ridesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
+}

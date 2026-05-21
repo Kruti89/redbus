@@ -1,0 +1,134 @@
+.mainContainer {
+  padding: 60px 20px;
+  text-align: center;
+
+  /* 🔥 Red Gradient Background */
+  background: linear-gradient(135deg, #ff5a5f, #e60012, #b70012);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+.mainContainer::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  top: -180px;
+  left: -150px;
+}
+
+.mainContainer::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  right: -200px;
+  bottom: -200px;
+}
+
+/* Top icon */
+.imgBox {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.imgBox img {
+  width: 40px;
+}
+
+/* Heading */
+.mainContainer h1 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cards grid */
+.flexContainer {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card */
+.flexItems {
+  background: linear-gradient(135deg, #fffafa, #ffecec);
+  border-radius: 14px;
+  padding: 30px 20px;
+  min-height: 280px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transition: 0.3s;
+}
+
+.flexItems:hover {
+  transform: translateY(-10px);
+}
+
+/* Icon inside card */
+.itemimg {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemimg img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* Title */
+.flexItems p:first-of-type {
+  color: #d60016;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 18px 0 10px;
+}
+
+/* Description */
+.desc {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .flexContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .flexContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mainContainer h1 {
+    font-size: 22px;
+  }
+}

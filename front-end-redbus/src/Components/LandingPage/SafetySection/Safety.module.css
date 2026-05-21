@@ -1,0 +1,96 @@
+.mainContainer {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 30px 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+
+  /* 🔴 Red Gradient Background */
+  background: linear-gradient(135deg, #ff5a5f, #e60012);
+
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+
+  /* Text white for contrast */
+  color: white;
+}
+
+/* Left Image */
+.imgBox img {
+  width: 110px;
+}
+
+/* Right Content */
+.writingConatiner h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.writingConatiner h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* safety+ tag */
+.boldspan {
+  background: white;
+  color: #e60012;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* lower features */
+.lowerFlex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Each feature box */
+.lowerFlexItems {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+.lowerFlexItems:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lowerFlexItems h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.lowerFlexItems p {
+  font-size: 13px;
+  color: #f1f1f1;
+  line-height: 1.5;
+}
+
+/* Know more link */
+.writingConatiner span {
+  color: #fff !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lowerFlex {
+    grid-template-columns: 1fr;
+  }
+}
